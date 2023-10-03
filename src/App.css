@@ -1,38 +1,183 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 20vmin;
-  pointer-events: none;
+.navbar {
+  background-color: #343a40;
+  padding: 15px 0;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffc107;
+}
+
+.main-content {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+label,
+input,
+button,
+select {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.main-content {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.contact-section {
+  flex: 1;
+  max-width: 300px;
+  margin-top: 50px;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-content,
+  .contact-section {
+    width: 100%;
+    max-width: none;
+    margin: 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* ... (your existing CSS) */
+
+.contact-container {
+  flex: 1;
+  max-width: 300px;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-content,
+  .contact-container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+}
+
+/* ... (your existing CSS) */
+
+.about-container,
+.services-container,
+.chooseus-container {
+  flex: 1;
+  margin: 0 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for different sections */
+.about-container {
+  background-color: #229e87;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.services-container {
+  background-color: #3420ea;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.chooseus-container {
+  background-color: #3498db;
+  color: white;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .about-container,
+  .services-container,
+  .chooseus-container {
+    width: 100%;
+    max-width: none;
+    margin: 0 0 20px 0;
   }
+}
+
+.App-logo {
+  height: 60px; /* Set the height of your logo as needed */
+  width: auto;
+  /*margin-bottom: 20px; /* Adjust the margin bottom to create space between the logo and navigation */
 }
